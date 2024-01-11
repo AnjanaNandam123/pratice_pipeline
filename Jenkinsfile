@@ -17,9 +17,13 @@ pipeline {
             echo "Test"
             }
         }
-        stage("stage 3"){
+       stage("stage 3"){
             steps{
             echo "Deploy"
+            withCredentials([usernamePassword(credentails:"Git Credentials",usernameVariable:UNAME,passwordVariable:PWD)]) {
+                echo "${UNAME} and ${PWD}"
+
+            }
             }
         }
     }
