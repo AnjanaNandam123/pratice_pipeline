@@ -21,7 +21,7 @@ pipeline {
             steps{
             echo "Deploy"
           withCredentials([usernamePassword(credentialsId: 'Git Credentials', passwordVariable: 'pwd', usernameVariable: 'uname')]) {
-    echo "${uname}"
+    echo "${uname} ${pwd}"
 }
             }
         }
