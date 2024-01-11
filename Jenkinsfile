@@ -1,13 +1,14 @@
 pipeline {
     agent any
-    triggers {
-      pollSCM 'H/5 * * * *'
+    environment {
+        VERSION = "1.0"
     }
+
     stages {
         stage("stage 1"){
             steps {
             echo "Build"
-            echo "Job name: $JOB_NAME"
+            echo "BUILD VERSION NUMBER ${VERSION}"
             }
 
         }
