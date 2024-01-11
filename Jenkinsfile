@@ -5,6 +5,7 @@ pipeline {
         stage("stage 1"){
             steps {
             echo "Build"
+            echo "Job name: $JOB_NAME"
             }
 
         }
