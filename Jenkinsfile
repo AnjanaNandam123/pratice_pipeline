@@ -24,15 +24,11 @@ pipeline {
     }
      post
     {
-        always{
-
-        }
+       
         success{
             echo "BUILD STATUS or BUILD STATUS CHANGE"
 
         }
-        failure {
-
-        }
+       
     }
 }
