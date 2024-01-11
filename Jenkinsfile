@@ -20,8 +20,8 @@ pipeline {
        stage("stage 3"){
             steps{
             echo "Deploy"
-            withCredentials([gitUsernamePassword(credentialsId: 'Git Credentials', gitToolName: 'Default')]) {
-    // some block
+          withCredentials([usernamePassword(credentialsId: 'Git Credentials', passwordVariable: 'pwd', usernameVariable: 'uname')]) {
+    echo "${uname}"
 }
             }
         }
